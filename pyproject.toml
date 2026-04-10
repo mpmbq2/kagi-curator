@@ -7,7 +7,11 @@ authors = [
     { name = "Matthew McCabe", email = "mpmbq2@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "feedparser>=6.0.12",
+    "kagiapi>=0.2.1",
+    "marimo>=0.23.0",
+]
 
 [project.scripts]
 kagi-curator = "kagi_curator:main"

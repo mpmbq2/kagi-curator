@@ -1,0 +1,107 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.23.0",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "8eefbebd84ce30cf158defef18890a4e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "9eb94b6ef67b954a9f737458d2ab9672",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "190a4568b24548e0dc8592f61f0a8cd2",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>&lt;kagiapi.api.KagiClient object at 0x108138ef0&gt;</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "684bf9e005d29c40251a294a05f354be",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[\"BASE_URL\", \"__class__\", \"__delattr__\", \"__dict__\", \"__dir__\", \"__doc__\", \"__eq__\", \"__format__\", \"__ge__\", \"__getattribute__\", \"__getstate__\", \"__gt__\", \"__hash__\", \"__init__\", \"__init_subclass__\", \"__le__\", \"__lt__\", \"__module__\", \"__ne__\", \"__new__\", \"__reduce__\", \"__reduce_ex__\", \"__repr__\", \"__setattr__\", \"__sizeof__\", \"__str__\", \"__subclasshook__\", \"__version__\", \"__weakref__\", \"api_key\", \"enrich\", \"fastgpt\", \"search\", \"session\", \"summarize\"]"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "3205ee5f3c46be7625d9c10a50003399",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "{\"meta\": {\"id\": \"dcf926400a9d87612e9f70b6289a752c\", \"node\": \"us-east4\", \"ms\": 261, \"api_balance\": \"text/plain+float:9.975811\"}, \"data\": [{\"t\": 0, \"url\": \"https://www.saltwaternewengland.com/2026/03/best-vacation-spots-in-new-england-for.html\", \"title\": \"Best Vacation Spots in New England for a family in Summer?\", \"snippet\": \"It\\u2019s not \\u201csalt water\\u201d New England, but the Woodstock, VT area is great for a family vacation. We have also liked staying on lakes with access to good paddling and hiking: Meredith NH and other places around Lake Winnipesaukee, Lake Placid area in NY, which isn&#39;t New England but feels pretty similar; Rangeley Lake, which is northwestern Maine near t..\", \"published\": \"2026-03-31T07:00:00Z\"}, {\"t\": 0, \"url\": \"https://maxread.substack.com/p/a-horror-adventure-set-in-dark-ages\", \"title\": \"A horror adventure set in Dark Ages England, a great new play about love and death, and more\", \"snippet\": \"A horror adventure set in Dark Ages England, a great new play about love and death, and more Greetings from Read Max HQ, and welcome to our weekly roundup column, in which I pick out some worthwhile and often overlooked books, articles, movies, and music to recommend to paying subscribers. Subscribers get access to these weekly emails and to the co..\", \"published\": \"2026-04-06T07:00:00Z\"}, {\"t\": 0, \"url\": \"https://cuencahighlife.com/basic-incomes-appeal-today-is-similar-to-its-roots-in-18th-century-england-its-a-way-to-compensate-people-for-a-common-good-taken-for-private-gain/\", \"title\": \"Basic income\\u2019s appeal today is similar to its roots in 18th\\u2011century England \\u2013 it\\u2019s a way to compensate people for a common good taken for private gain - CuencaHighLife\", \"snippet\": \"Basic income\\u2019s appeal today is similar to its roots in 18th\\u2011century England \\u2013 it\\u2019s a way to compensate people for a common good taken for private gain To prevent the U.S. from suffering mass hunger and political chaos, the story goes, it will need a new system: The government will provide many people, or maybe everyone, with no-strings-attached cas..\", \"published\": \"2026-04-06T07:00:00Z\"}, {\"t\": 0, \"url\": \"https://chorus.fm/features/interviews/the-maine/\", \"title\": \"The Maine\", \"snippet\": \"A couple of weeks ago I was able to connect with Jared Monaco (guitar) and Pat Kirch (drums) of The Maine to discuss the band\\u2019s tenth studio album, Joy Next Door. To date The Maine has released two singles from Joy Next Door: the thrilling introduction to the new world you\\u2019re creating with \\u201cDie To Fall\\u201d, and today brings \\u201cQuiet Part Loud.\\u201d How did ..\", \"published\": \"2026-04-06T07:00:00Z\"}]}"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "a0a9d12a6a8c29c4cde11b2ba86caf34",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "500 Server Error: Internal Server Error for url: https://kagi.com/api/v0/fastgpt",
+          "traceback": null
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;/var/folders/6v/w1kvpbr50q3fw6wyl_g9j6m40000gn/T/marimo_78609/__marimo__cell_PKri_.py&quot;</span>, line <span class=\"m\">3</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"n\">gpt_result</span> <span class=\"o\">=</span> <span class=\"n\">kc</span><span class=\"o\">.</span><span class=\"n\">fastgpt</span><span class=\"p\">(</span><span class=\"n\">query</span><span class=\"o\">=</span><span class=\"s2\">&quot;vermont&quot;</span><span class=\"p\">)</span>\n<span class=\"w\">                 </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/Users/matt/Projects/kagi-curator/.venv/lib/python3.12/site-packages/kagiapi/api.py&quot;</span>, line <span class=\"m\">80</span>, in <span class=\"n\">fastgpt</span>\n<span class=\"w\">    </span><span class=\"n\">response</span><span class=\"o\">.</span><span class=\"n\">raise_for_status</span><span class=\"p\">()</span>\n  File <span class=\"nb\">&quot;/Users/matt/Projects/kagi-curator/.venv/lib/python3.12/site-packages/requests/models.py&quot;</span>, line <span class=\"m\">1028</span>, in <span class=\"n\">raise_for_status</span>\n<span class=\"w\">    </span><span class=\"k\">raise</span> <span class=\"n\">HTTPError</span><span class=\"p\">(</span><span class=\"n\">http_error_msg</span><span class=\"p\">,</span> <span class=\"n\">response</span><span class=\"o\">=</span><span class=\"bp\">self</span><span class=\"p\">)</span>\n<span class=\"gr\">requests.exceptions.HTTPError</span>: <span class=\"n\">500 Server Error: Internal Server Error for url: https://kagi.com/api/v0/fastgpt</span>\n</pre></div>\n</span>",
+          "mimetype": "application/vnd.marimo+traceback"
+        }
+      ]
+    },
+    {
+      "id": "Xref",
+      "code_hash": null,
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}
