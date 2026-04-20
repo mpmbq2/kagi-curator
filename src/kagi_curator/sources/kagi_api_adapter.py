@@ -9,8 +9,15 @@ from .data_source_adapter import DataSourceAdapter
 
 
 class KagiAPIAdapter(DataSourceAdapter):
-    def __init__(self, api_key: str | None = None):
-        self.client = KagiClient(api_key=api_key)
+    def __init__(self, api_key: str | None = None) -> None:
+        self._api_key = api_key
+        self._client: KagiClient | None = None
+
+    @property
+    def client(self) -> KagiClient:
+        if self._client is None:
+            self._client = KagiClient(api_key=self._api_key)
+        return self._client
 
     def fetch_news(self, query: str, limit: int) -> List[Article]:
         response = self.client.enrich(query)
