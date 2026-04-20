@@ -1,9 +1,10 @@
 import datetime
-from typing import List, Dict, Any
+from typing import List
 from urllib.parse import urlparse
 
 from kagiapi import KagiClient
 
+from ..models.result import Article
 from .data_source_adapter import DataSourceAdapter
 
 
@@ -11,7 +12,7 @@ class KagiAPIAdapter(DataSourceAdapter):
     def __init__(self, api_key: str | None = None):
         self.client = KagiClient(api_key=api_key)
 
-    def fetch_news(self, query: str, limit: int) -> List[Dict[str, Any]]:
+    def fetch_news(self, query: str, limit: int) -> List[Article]:
         response = self.client.enrich(query)
 
         if errors := response.get("error"):
@@ -21,14 +22,14 @@ class KagiAPIAdapter(DataSourceAdapter):
         results = []
         for item in items[:limit]:
             url = item.get("url") or ""
-            results.append({
-                "title": item.get("title") or "",
-                "summary": item.get("snippet") or "",
-                "url": url,
-                "source": self._extract_domain(url),
-                "published_date": self._parse_date(item.get("published")),
-                "raw_data": item,
-            })
+            results.append(Article(
+                title=item.get("title") or "",
+                summary=item.get("snippet") or "",
+                url=url,
+                source=self._extract_domain(url),
+                published_date=self._parse_date(item.get("published")),
+                raw_data=item,
+            ))
         return results
 
     def _parse_date(self, value) -> datetime.datetime:

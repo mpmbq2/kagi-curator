@@ -67,20 +67,7 @@ class NewsCurator(ABC):
             for query in queries:
                 try:
                     articles = data_source.fetch_news(query, limit_per_source)
-                    # Convert dict articles to Article objects
-                    article_objects = [
-                        Article(
-                            title=article.get('title', ''),
-                            summary=article.get('summary', ''),
-                            url=article.get('url', ''),
-                            source=article.get('source', 'Unknown'),
-                            published_date=article.get('published_date', datetime.datetime.now()),
-                            relevance_score=article.get('relevance_score'),
-                            raw_data=article.get('raw_data')
-                        )
-                        for article in articles
-                    ]
-                    all_articles.extend(article_objects)
+                    all_articles.extend(articles)
                 except Exception as e:
                     errors.append(f"Failed to fetch from {data_source.__class__.__name__} with query '{query}': {str(e)}")
         

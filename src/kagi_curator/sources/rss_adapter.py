@@ -1,9 +1,10 @@
 import datetime
-from typing import List, Dict, Any
+from typing import List
 from urllib.parse import urlparse
 
 import feedparser
 
+from ..models.result import Article
 from .data_source_adapter import DataSourceAdapter
 
 
@@ -11,7 +12,7 @@ class RSSAdapter(DataSourceAdapter):
     def __init__(self, feed_url: str):
         self.feed_url = feed_url
 
-    def fetch_news(self, query: str, limit: int) -> List[Dict[str, Any]]:
+    def fetch_news(self, query: str, limit: int) -> List[Article]:
         feed = feedparser.parse(self.feed_url)
 
         if feed.bozo and not feed.entries:
@@ -21,14 +22,14 @@ class RSSAdapter(DataSourceAdapter):
         results = []
         for entry in feed.entries[:limit]:
             url = entry.get("link") or ""
-            results.append({
-                "title": entry.get("title") or "",
-                "summary": entry.get("summary") or entry.get("description") or "",
-                "url": url,
-                "source": feed.feed.get("title") or self._extract_domain(self.feed_url),
-                "published_date": self._parse_entry_date(entry),
-                "raw_data": dict(entry),
-            })
+            results.append(Article(
+                title=entry.get("title") or "",
+                summary=entry.get("summary") or entry.get("description") or "",
+                url=url,
+                source=feed.feed.get("title") or self._extract_domain(self.feed_url),
+                published_date=self._parse_entry_date(entry),
+                raw_data=dict(entry),
+            ))
         return results
 
     def _parse_entry_date(self, entry) -> datetime.datetime:
