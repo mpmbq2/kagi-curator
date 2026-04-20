@@ -1,0 +1,36 @@
+# kagi-curator configuration
+# Set KAGI_API_KEY environment variable for Kagi API access.
+# Sections and subsections are processed in the order listed here.
+
+sections:
+  - name: Vermont
+    subsections:
+      - name: Statewide
+        article_limit: 5
+        queries:
+          - Vermont news today
+          - Vermont politics
+          - Vermont economy
+        data_sources:
+          - type: kagi
+          - type: rss
+            url: https://vtdigger.org/feed
+
+      - name: Lamoille County
+        article_limit: 3
+        queries:
+          - Lamoille County Vermont
+          - Morrisville Vermont news
+          - Stowe Vermont news
+        data_sources:
+          - type: kagi
+
+  - name: National
+    subsections:
+      - name: Top Stories
+        article_limit: 5
+        queries:
+          - top US news today
+          - US politics today
+        data_sources:
+          - type: kagi
