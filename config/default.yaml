@@ -1,6 +1,21 @@
 # kagi-curator configuration
 # Set KAGI_API_KEY environment variable for Kagi API access.
+# Set SMTP_PASSWORD environment variable for email delivery.
 # Sections and subsections are processed in the order listed here.
+
+# Email delivery (optional). Remove or omit to skip email delivery.
+# Uncomment and fill in to enable:
+# email:
+#   smtp_host: smtp.gmail.com
+#   smtp_port: 587
+#   use_tls: true
+#   smtp_username: you@example.com
+#   # smtp_password: ""  # prefer SMTP_PASSWORD env var
+#   from_address: you@example.com
+#   from_name: Daily News Digest
+#   to_addresses:
+#     - recipient@example.com
+#   subject: "Daily News Digest"
 
 sections:
   - name: Vermont

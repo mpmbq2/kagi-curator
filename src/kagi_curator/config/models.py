@@ -25,6 +25,20 @@ class SectionConfig:
 
 
 @dataclass
+class EmailConfig:
+    smtp_host: str
+    from_address: str
+    to_addresses: List[str]
+    smtp_port: int = 587
+    smtp_username: str | None = None
+    smtp_password: str | None = None  # prefer SMTP_PASSWORD env var
+    from_name: str = "Daily News Digest"
+    subject: str = "Daily News Digest"
+    use_tls: bool = True
+
+
+@dataclass
 class AppConfig:
     sections: List[SectionConfig]
     kagi_api_key: str | None = None
+    email: EmailConfig | None = None
