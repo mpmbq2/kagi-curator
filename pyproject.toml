@@ -11,6 +11,7 @@ dependencies = [
     "feedparser>=6.0.12",
     "kagiapi>=0.2.1",
     "marimo>=0.23.0",
+    "pyyaml>=6.0",
 ]
 
 [project.scripts]
