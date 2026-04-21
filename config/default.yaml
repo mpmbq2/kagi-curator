@@ -40,6 +40,60 @@ sections:
         data_sources:
           - type: kagi
 
+  - name: Missouri
+    subsections:
+      - name: Statewide
+        article_limit: 5
+        queries:
+          - Missouri news today
+          - Missouri politics
+          - Missouri economy
+        data_sources:
+          - type: kagi
+
+      - name: St. Louis
+        article_limit: 3
+        queries:
+          - St. Louis news today
+          - St. Louis Missouri
+        data_sources:
+          - type: kagi
+
+      - name: Kansas City
+        article_limit: 3
+        queries:
+          - Kansas City news today
+          - Kansas City Missouri
+        data_sources:
+          - type: kagi
+
+  - name: Illinois
+    subsections:
+      - name: Statewide
+        article_limit: 5
+        queries:
+          - Illinois news today
+          - Illinois politics
+          - Illinois economy
+        data_sources:
+          - type: kagi
+
+      - name: Chicago
+        article_limit: 3
+        queries:
+          - Chicago news today
+          - Chicago Illinois
+        data_sources:
+          - type: kagi
+
+      - name: Downstate Illinois
+        article_limit: 3
+        queries:
+          - downstate Illinois news
+          - Springfield Illinois news
+        data_sources:
+          - type: kagi
+
   - name: National
     subsections:
       - name: Top Stories
